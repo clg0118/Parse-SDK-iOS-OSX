@@ -122,4 +122,17 @@ PF_ASSUME_NONNULL_BEGIN
 
 @end
 
+/*!
+ As of Parse 1.8.1, subclasses are automatically registered when parse is initialized.
+
+ This protocol exists ONLY so that, if you absolutely need it, you can perform manual subclass registration
+ via `[PFObject registerSubclass]`. Note that any calls to `registerSubclass` must happen after parse has been
+ initialized already. This should only ever be needed in the scenario where you may be dynamically creation new 
+ Objective-C classes for parse objects, or you are doing conditional subclass registration (e.g. only register class A 
+ if config setting 'foo' is defined, otherwise register B).
+ */
+@protocol PFSubclassingSkipAutomaticRegistration <PFSubclassing>
+
+@end
+
 PF_ASSUME_NONNULL_END

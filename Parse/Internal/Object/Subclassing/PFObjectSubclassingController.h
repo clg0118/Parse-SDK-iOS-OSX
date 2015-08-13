@@ -15,16 +15,10 @@
 @interface PFObjectSubclassingController : NSObject
 
 ///--------------------------------------
-/// @name Init
-///--------------------------------------
-
-//TODO: (nlutsenko, richardross) Make it not terrible aka don't have singletons.
-+ (instancetype)defaultController;
-+ (void)clearDefaultController;
-
-///--------------------------------------
 /// @name Registration
 ///--------------------------------------
+
+- (void)scanForUnregisteredSubclasses:(BOOL)shouldSubscribe;
 
 - (Class<PFSubclassing>)subclassForParseClassName:(NSString *)parseClassName;
 - (void)registerSubclass:(Class<PFSubclassing>)kls;

@@ -40,6 +40,7 @@ PFInstallationIdentifierStoreProvider>
 @interface PFCoreManager : NSObject
 <PFLocationManagerProvider,
 PFObjectControllerProvider,
+PFObjectSubclassingControllerProvider,
 PFObjectBatchController,
 PFObjectFilePersistenceControllerProvider,
 PFPinningObjectStoreProvider,

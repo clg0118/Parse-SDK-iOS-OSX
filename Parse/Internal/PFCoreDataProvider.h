@@ -24,6 +24,14 @@ NS_ASSUME_NONNULL_BEGIN
 
 @end
 
+@class PFObjectSubclassingController;
+
+@protocol PFObjectSubclassingControllerProvider <NSObject>
+
+@property (nonatomic, strong) PFObjectSubclassingController *objectSubclassingController;
+
+@end
+
 @class PFObjectBatchController;
 
 @protocol PFObjectBatchController <NSObject>
